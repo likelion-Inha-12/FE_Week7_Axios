@@ -15,14 +15,14 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-export default function Card({ img, name, id}) {
+export default function Card({ img, name, id }) {
     const navigate = useNavigate();
   
     return (
-      <Wrapper id={id} onClick={() => navigate(`/user/{id}`)}>
-        <Photo src={img} />
+      <Wrapper onClick={() => navigate(`/user/${id}`)}>
+        <Photo src={img} alt="img"/>
         <Margin height={10}/>
-        <a>{name}</a>
+        <p>{name}</p>
       </Wrapper>
     );
   }

@@ -17,11 +17,19 @@ const Wrapper = styled.div`
   width: 100%;
   position: relative;
 `;
+const Wrapper2 = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+`;
 
-const Layout = () => {
+const Layout = ({children}) => {
+  
   return (
     <BackGround>
       <Wrapper>
+        <Wrapper2>
+          {children}
+        </Wrapper2>
         <Outlet/>
       </Wrapper>
     </BackGround>
